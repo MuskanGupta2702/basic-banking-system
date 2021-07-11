@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="table-box">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Transaction Id</th>
+                <th scope="col">Sender Account No.</th>
+                <th scope="col">Receiver Account No.</th>
+                <th scope="col">Amount Transfered</th>
+                <th scope="col">Transaction Date</th>
+                <th scope="col">Credit/Debit</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for statement in bank_statement %}
+                <tr>
+                    <td><strong>{{ statement.trans_id }}</strong></td>
+                    <td>{{ statement.sender_account_no }}</td>
+                    <td>{{ statement.receiver_account_no }}</td>
+                    <td>{{ statement.amount_transfered }}</td>
+                    <td>{{ statement.date_transfer }}</td>
+                    {% if statement.sender_account_no == customer_account_no %}
+                    <td>Debit</td>
+                    {% else %}
+                    <td>Credit</td>
+                    {% endif %}
+
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock body %}

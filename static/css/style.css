@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* .home-bg{
+    opacity: 0.7;
+    z-index: -1;
+    width: 100vw;
+    height: 80vh;
+    position: relative;
+} */
+nav::before{
+    content: "";
+    position: absolute;
+    background: url('https://preview.colorlib.com/theme/banker/images/xhero_2.jpg.pagespeed.ic.Z8dSguXOuW.webp') no-repeat center center/cover ;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+}
+/* .navbar::before{
+    background: rgba(184, 178, 166, 0.7);
+} */
+#ham{
+    display: none;
+}
+.navbar{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 10px;
+    font-size: 22px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.bank-name{
+    display: flex;
+    color: rgb(255, 255, 255);
+    align-items: center;
+}
+.bank-box{
+    display: flex;
+    align-items: center;
+}
+.bank-name p{
+    margin: 0px 10px;
+}
+.bank-name i{
+    font-size: 25px;
+}
+.navList{
+    display: flex;
+    list-style: none;
+}
+.item{
+margin: 5px 20px;
+
+}
+.item-link{
+    text-decoration: none;
+    color: rgb(222, 222, 222);
+}
+.item-link:active,.item-link:hover{
+    color: rgb(255, 255, 255);
+}
+
+.home-box{
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10% auto 50px auto;
+}
+.home-box h1{
+    font-size: 3rem;
+}
+.home-box h3{
+    font-size: 2rem;
+}
+.table-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 70px auto;
+}
+.table{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+    /* background: white; */
+    background: rgba(50, 50, 50, 0.8);
+    margin-top: 25px ;
+    color: white;
+}
+table,th,td{
+    border: 2px solid #bebdbd;
+    text-align: center;
+    font-weight: bold;
+}
+th,td{
+    padding: 8px;
+}
+.table a{
+    text-decoration: none;
+    color: white;
+}
+.pg-title{
+    text-align: center;
+    margin: 30px 0px 10px 0px;
+}
+.transfer-form{
+    display: flex;
+    width: 45%;
+    flex-direction: column;
+    align-items: stretch;
+    margin: auto;
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 21px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+label{
+    margin: 13px 0px 3px 0px;
+    font-weight: bold;
+}
+input{
+border-radius: 5px;
+font-size: 21px;
+padding: 5px;
+}
+
+.form-btn{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+.form-btn a,input[type = submit]{
+    font-size: 20px;
+    text-decoration: none;
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+}
+input[type = submit]{
+ width: 30%;
+}
+.form-btn a:hover,input[type = submit]:hover{
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    cursor: pointer;
+}
+
+.home-btn{
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+    margin: auto;
+}
+
+.home-btn a{
+    font-size: 22px;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid black;
+    color:white;
+    padding: 5px;
+    border-radius: 5px;
+}
+.home-btn a:hover{
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    cursor: pointer;
+}
+
+.message-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    border: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin: 30px auto 0px auto;
+    padding: 5px;
+    width: 30vw;
+    color: white;
+}

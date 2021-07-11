@@ -1,0 +1,24 @@
+.home-bg{
+    height: 40vh ;
+    top: 56px;
+}
+#ham{
+    display: flex;
+    margin: 0px;
+    justify-self: flex-end;
+}
+.navbar{
+    flex-direction: column;
+    padding: 15px 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.navList{
+    display: none;
+    flex-direction: column;
+    align-self: flex-start;
+    margin: 12px 0px 0px 0px;
+}
+.bank-name{
+    margin: 0px 10px;
+    justify-content: space-between;
+}
