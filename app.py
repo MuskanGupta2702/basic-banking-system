@@ -24,7 +24,6 @@ class Customers(db.Model):
         return f"{self.customer_name}"
 
 
-
 class Transaction(db.Model):
     trans_id = db.Column(db.Integer,primary_key = True)
     sender_name = db.Column(db.String(200),nullable = False)
@@ -116,11 +115,11 @@ def transfer_money():
 
 @app.route('/bank_statement/<int:customer_account_no>')
 def bank_statement(customer_account_no):
-    # customer = Customers.query.filter_by(customer_account_no = customer_account_no)
+    customer = Customers.query.filter_by(customer_account_no = customer_account_no).first()
     # bank_statement = Transaction.query.filter_by(sender_account_no = customer_account_no).all() + Transaction.query.filter_by(receiver_account_no = customer_account_no).all()
     bank_statement = Transaction.query.filter(or_(Transaction.sender_account_no.like(customer_account_no),Transaction.receiver_account_no.like(customer_account_no))).all()
     print(bank_statement)
-    return render_template('bank_statement.html',bank_statement = bank_statement,customer_account_no = customer_account_no)
+    return render_template('bank_statement.html',bank_statement = bank_statement,customer_account_no = customer_account_no,customer = customer)
 
 
 if __name__ == "__main__":
