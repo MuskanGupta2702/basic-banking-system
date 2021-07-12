@@ -45,7 +45,7 @@
 .table{
     overflow: auto;
     width: 90%;
-    margin-left: 280px;
+    /* margin-left: 280px; */
 }
 .transfer-form{
     width: 90%;
